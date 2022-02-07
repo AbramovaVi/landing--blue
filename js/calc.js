@@ -2,74 +2,6 @@ var $ = jQuery;
 
 var c = 0;
 
-// function isValidEmail(emailAddress) {
-//   var pattern = new RegExp(
-//     /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i
-//   );
-//   return pattern.test(emailAddress);
-// }
-
-// function isValidPhone(phone) {
-//   var phone = phone.replace(/[^0-9]/gim, '');
-//   var flag = !0;
-//   var length = phone.length;
-//   for (var i = 0; i < length; i++) {
-//     if (i == 1) {
-//       if (phone[i] == '7' || phone[i] == '8') {
-//         var flag = !1;
-//       }
-//     }
-//   }
-//   if (length < 10) {
-//     var flag = !1;
-//   }
-//   return flag;
-// }
-
-// function resizeModal(event, maxWidth) {
-//   if (maxWidth === undefined) {
-//     maxWidth = null;
-//   }
-//   var wWidth = $(window).width();
-//   var width = wWidth * 0.9;
-//   if (!maxWidth) {
-//     if (!event) {
-//       $('#modal_form').css('max-width', 'none');
-//     }
-//     if ($('#modal_form').css('max-width') != 'none') {
-//       maxWidth = parseInt($('#modal_form').css('max-width'));
-//     }
-//   }
-//   if (maxWidth) {
-//     $('#modal_form').css('max-width', maxWidth);
-//     width = Math.min(width, maxWidth);
-//   }
-//   $('#modal_form').css('width', width);
-//   if (event) {
-//     $('#modal_form').css('top', window.pageYOffset + 30 + 'px');
-//   }
-// }
-
-// function showModal(content, maxWidth) {
-//   if (maxWidth === undefined) {
-//     maxWidth = null;
-//   }
-//   $('#modal_content').html(content);
-//   resizeModal(null, maxWidth);
-//   $('#overlay').fadeIn(400, function () {
-//     $('#modal_form')
-//       .css('display', 'block')
-//       .animate(
-//         {
-//           opacity: 1,
-//           top: window.pageYOffset + 30 + 'px',
-//         },
-//         200
-//       );
-//   });
-//   $('.modal-wrapper').fadeToggle(500);
-// }
-
 (function ($) {
   'use strict';
   $(document).ready(function () {
@@ -118,45 +50,7 @@ var c = 0;
       calcResult(!0);
     });
     var page = $('[name=def-page]').val();
-    // var maxsum = 0;
-    // if (page == 'truck' || page == 'special') {
-    //   maxsum = 10;
-    // } else if (page == 'moto') {
-    //   maxsum = 5;
-    // } else if (page == 'legal') {
-    //   maxsum = 30;
-    // } else {
-    //   maxsum = 10;
-    // }
-    // rangeSumm.noUiSlider.updateOptions({
-    //   range: {
-    //     min: 50000,
-    //     '33%': [1000000, 10000],
-    //     '66%': [20000000, 100000],
-    //     '99%': [60000000, 1000000],
-    //     max: maxsum * 6000000,
-    //   },
-    // });
-    // $('.calc_sum_res')
-    //   .siblings('.under-input-wrapper')
-    //   .find('.under-input-2')
-    //   .html(maxsum + ' 000 000');
-    // $('.max-sum').html(maxsum + ' 000 000 ₽');
-    // $(function () {
-    //   if ($('body').width() < 768) {
-    //     $('.li-main-1').html(
-    //       '<div class="li-pre"></div>100% Р С•Р Т‘Р С•Р В±РЎР‚Р ВµР Р…Р С‘Р Вµ'
-    //     );
-    //     $('.li-main-2').html(
-    //       '<div class="li-pre"></div>Р РЋРЎС“Р СР СР В° Р С•РЎвЂљ 30 000 Р Т‘Р С• <span class="max-sum">' +
-    //         maxsum +
-    //         ' Р СР В»Р Р…. ₽</span>'
-    //     );
-    //     $('.li-main-3').html(
-    //       '<div class="li-pre"></div>Р РЋРЎР‚Р С•Р С” Р С•РЎвЂљ 1 РњРµСЃСЏС†Р В° Р Т‘Р С• 3 Р В»Р ВµРЎвЂљ'
-    //     );
-    //   }
-    // });
+    
     $('.graph-button').click(function (event) {
       showShedule();
     });
@@ -436,24 +330,8 @@ function getStv(flag) {
     document.getElementById('calc_month_range').noUiSlider.get()
   );
   if (flag) {
-    // if (mths < 13) {
-    //   stv = 3.3;
-    // } else if (mths >= 13 && mths < 24) {
-    //   stv = 2.5;
-    // } else if (mths >= 24) {
-    //   stv = 2;
-    // }
     stv = 8 / 12;
   }
-  // if (summa < 100000) {
-  //   stv2 = 3.3;
-  // } else if (summa >= 100000 && summa < 500000) {
-  //   stv2 = 3;
-  // } else if (summa >= 500000 && summa < 1000000) {
-  //   stv2 = 2.5;
-  // } else if (summa >= 1000000) {
-  //   stv2 = 2;
-  // }
   stv2 = 8 / 12;
   if (stv > stv2) {
     res = stv2;
@@ -764,104 +642,8 @@ $(document).ready(function () {
     var val = $(this).val();
     var summa = val.replace(/[^-0-9]/gim, '');
     val = addSpaces(val.replace(/[^-0-9]/gim, '') + ' ₽');
-    // var stv2 = 0;
-    // if (summa < 100000) {
-    //   stv2 = 3.3;
-    // } else if (summa >= 100000 && summa < 500000) {
-    //   stv2 = 3;
-    // } else if (summa >= 500000 && summa < 1000000) {
-    //   stv2 = 2.5;
-    // } else if (summa >= 1000000) {
-    //   stv2 = 2;
-    // }
     var stv2 = 8 / 12;
     $('#calc_rate_range').val(stv2);
     $('.form-stv ').html(stv2 * 12);
   });
 });
-
-// function showCallbackForm() {
-//   var title =
-//     'Р С›РЎРѓРЎвЂљР В°Р Р†РЎРЉРЎвЂљР Вµ Р Р…Р С•Р СР ВµРЎР‚, Р С‘ Р СРЎвЂ№ Р вЂ™Р В°Р С Р С—Р ВµРЎР‚Р ВµР В·Р Р†Р С•Р Р…Р С‘Р С!';
-//   var form = '<div class="col-sm-12"><div class="section-header text-center">';
-//   form += '<h2>' + title + '</h2>';
-//   form += '</div></div>';
-//   form +=
-//     '<div class="col-sm-12"><form method="post" class="form callback-form"><div class="col-md-6 col-sm-6"> <input name="telephone" class="form-telephone" type="tel" placeholder="Р СћР ВµР В»Р ВµРЎвЂћР С•Р Р…" required=""></div><div class="col-md-6 col-sm-6"> <button type="submit" class="form-button"><span class="fa fa-phone"></span> <span class="form-button-text">Р СџР С•Р В·Р Р†Р С•Р Р…Р С‘РЎвЂљР Вµ Р СР Р…Р Вµ!</span></button></div><p class="form-notification" style="display:none;line-height:normal;padding:10px 10px;font-size:2.4rem;"> Р вЂќР ВµР В»Р С• РЎРѓР Т‘Р ВµР В»Р В°Р Р…Р С•! Р вЂ”Р В°Р Р†Р В°РЎР‚Р С‘РЎвЂљР Вµ РЎРѓР ВµР В±Р Вµ РЎвЂЎР В°РЎв‚¬Р ВµРЎвЂЎР С”РЎС“ РЎвЂЎР В°РЎРЏ, Р С—Р С•Р С”Р В° Р СР ВµР Р…Р ВµР Т‘Р В¶Р ВµРЎР‚ Р Р…Р В°Р В±Р С‘РЎР‚Р В°Р ВµРЎвЂљ Р Р†Р В°РЎв‚¬ Р Р…Р С•Р СР ВµРЎР‚ РЎвЂљР ВµР В»Р ВµРЎвЂћР С•Р Р…Р В°... :)</p></form></div>';
-//   showModal(form, 700);
-//   $('.callback-form').submit(function (e) {
-//     var form = $(this);
-//     e.preventDefault();
-//     var telephone = $('.form-telephone', form).val();
-//     telephone = telephone ? telephone : '';
-//     var formValid = !0;
-//     if (isValidPhone(telephone)) {
-//       $('input.form-telephone', form).removeClass('not-valid');
-//     } else {
-//       formValid = !1;
-//       $('input.form-telephone', form).addClass('not-valid');
-//     }
-//     if (formValid) {
-//       var data = {};
-//       data.phone = telephone;
-//       data.city = mainCity ? mainCity : '';
-//       data.url = document.location.href;
-//       data.referrer = $.cookie('first_referrer');
-//       data.utm_source = $.cookie('utm_source');
-//       data.utm_medium = $.cookie('utm_medium');
-//       data.utm_campaign = $.cookie('utm_campaign');
-//       data.utm_content = $.cookie('utm_content');
-//       data.utm_term = $.cookie('utm_term');
-//       $.ajax({
-//         type: 'POST',
-//         url: 'https://app.creditors24.com/front/site/callback',
-//         data: data,
-//         beforeSend: function () {
-//           var button = $('button.form-button', form);
-//           $('.fa.fa-phone', button)
-//             .addClass('fa-spinner fa-spin')
-//             .removeClass('fa-phone');
-//           $('.form-button-text', button).html(
-//             'Р С›РЎвЂљР С—РЎР‚Р В°Р Р†Р С”Р В°...'
-//           );
-//           button.prop('disabled', !0);
-//         },
-//         success: function () {
-//           trackGoal('CBK_CALL');
-//           $('.form-notification', form).fadeIn(500);
-//           var button = $('button.form-button', form);
-//           $('.fa.fa-spinner', button)
-//             .addClass('fa-check')
-//             .removeClass('fa-spinner fa-spin');
-//           $('.form-button-text', button).html(
-//             'Р С›РЎвЂљР С—РЎР‚Р В°Р Р†Р В»Р ВµР Р…Р С•!'
-//           );
-//         },
-//         error: function () {
-//           var button = $('button.form-button', form);
-//           $('.fa.fa-spinner', button)
-//             .addClass('fa-phone')
-//             .removeClass('fa-spinner fa-spin');
-//           $('.form-button-text', button).html(
-//             'Р СџР С•Р В·Р Р†Р С•Р Р…Р С‘РЎвЂљР Вµ Р СР Р…Р Вµ!'
-//           );
-//           button.prop('disabled', !1);
-//           alert(
-//             'Р СџРЎР‚Р С‘ Р С•РЎвЂљР С—РЎР‚Р В°Р Р†Р С”Р Вµ Р Р†Р С•Р В·Р Р…Р С‘Р С”Р В»Р В° Р С•РЎв‚¬Р С‘Р В±Р С”Р В°. Р СџР С•Р С—РЎР‚Р С•Р В±РЎС“Р в„–РЎвЂљР Вµ Р ВµРЎвЂ°Р Вµ РЎР‚Р В°Р В·.'
-//           );
-//         },
-//       });
-//     }
-//     return !1;
-//   });
-// }
-
-// function initCallbackButton() {
-//   $(document.body).append(
-//     '<a href="#" id="callback__toggle"><div class="circlephone" style="transform-origin: center;"></div><div class="circle-fill" style="transform-origin: center;"></div><div class="img-circle" style="transform-origin: center;"><div class="img-circleblock" style="transform-origin: center;"></div></div></a>'
-//   );
-//   $('#callback__toggle, .callback-btn, .callback-link').click(function (event) {
-//     event.preventDefault();
-//     showCallbackForm();
-//   });
-// }
