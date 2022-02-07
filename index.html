@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	<header>
+		<div class="overlay"></div>
+		<div class="burger-icon" id="burger-icon">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+		<!-- <img alt="burger" class="burger" /> -->
+		<div class="logo">
+			<span>лого</span>
+		</div>
+		<nav class="navbar">
+			<ul>
+				<li><a href="">Калькулятор</a></li>
+				<li><a href="#requirements">Требования</a></li>
+				<li><a href="#request">Подать заявку</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+			<p class="phone-number">+7 (800) 555-28-45</p>
+			<div class="btn-wrapper">
+		    	<div class="button">
+		    		<span>Заказать звонок</span>
+		    	</div>
+		    </div>
+			<!-- <div class="button">
+				<span>Заказать звонок</span>
+			</div> -->
+		</nav>
+		<div class="phone-circle">
+            <img src="img/phone.png" alt="" class="phone-icon">
+        </div>
+	</header>
+
+	<section class="hero">
+	  <h1>Автоломбард под залог ПТС <span class="city-name">в Москве</span></h1>
+	  <ul>
+	  	<li><img src="img/marker.png" class="li-marker" alt="">Льготный займ от 2% в месяц без посещения офиса</li>
+	  	<li><img src="img/marker.png" class="li-marker" alt="">От 30 000 до 15 000 000 ₽ на срок до 3 лет</li>
+	  	<li><img src="img/marker.png" class="li-marker" alt="">100% одобрение даже с плохой кредитной историей</li>
+	  	<li><img src="img/marker.png" class="li-marker" alt="">Льготный займ от 2% в месяц без посещения офиса</li>
+	  	<li><img src="img/marker.png" class="li-marker" alt="">От 30 000 до 15 000 000 ₽ на срок до 3 лет</li>
+	  </ul>
+	  <div class="btn-wrapper">
+		<div class="button">
+		   	<span>Отправить заявку</span>
+		</div>
+	  </div>
+	  <picture>
+	    <source srcset="img/hero-3x.png" media="(min-width: 1280px)" />
+	    <source srcset="img/hero-2x.png" media="(min-width: 767px)" />
+	    <img src="img/hero-2x.png" alt="hero" />
+	  </picture>
+	</section>
+
+	<section class="calculation">
+		<h2>Калькулятор займа</h2>
+		<div class="calc-wrapper">
+			<div class="calculation-range">
+				<label for="">Сумма займа</label>
+				<input id='sum-input' type="number" value="980000" >
+				<input id='sum-range' type="range" min="30000" max="15000000" value="980000" class="slider">
+				<div class="range">
+					<span>от 30 000 ₽</span>
+					<span>до 15 000 000 ₽</span>
+				</div>
+				<label for="">Срок займа</label>
+				<input id='time-input' type="number" value="12">
+				<input id='time-range' type="range" min="1" max="36" value="12" class="slider">
+				<div class="range">
+					<span>от 1 месяца</span>
+					<span>до 36 месяцев</span>
+				</div>
+			</div>
+			
+			<div class="calculation-card">
+				<div class="wrapper">
+					<div>
+						<h5>Ежемесячный платеж:</h5>
+						<p id="res">98 453 ₽</p>
+					</div>
+					<div>
+						<h5>Ваша ставка:</h5>
+						<p class="stv">2.5%</p>
+					</div>
+				</div>
+				<div class="btn-wrapper">
+					<div class="button">
+			   			<span>Получить одобрение</span>
+					</div>
+		  		</div>
+		  		<div class="action">
+			        <img src="img/document.svg" alt="doc" />
+			        <div class="full">Полные условия займа</div>
+			      </div>
+			      <div class="action graf">
+			        <img src="img/calendar.svg" alt="calendar" />
+			        <div>Посмотреть график платежей</div>
+			      </div>
+	    		</div>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="steps">
+		<h2>Всего 3 шага для получения денег </h2>
+		<div class="card-box">
+			<div class="card">
+			    <img src="img/step1.png" alt="" class="card-icon">
+				<p class="card-name">
+					<span>1.</span>Подайте заявку
+				</p>
+				<p class="card-text">
+					Заполняете заявку и получаете одобрение в течение 5 минут
+				</p>
+			</div>
+			<!-- <img src="img/line-bg1.png" alt=""> -->
+			<div class="card">
+				<img src="img/step2.png" alt="" class="card-icon">
+				<p class="card-name">
+					<span>2.</span>Подпишите договор
+				</p>
+				<p class="card-text">
+					Приезжаете в офис для оценки авто и заключения договора
+				</p>
+			</div>
+			<!-- <img src="img/line-bg2.png" alt=""> -->
+			<div class="card">
+				<img src="img/step3.png" alt="" class="card-icon">
+				<p class="card-name">
+					<span>3.</span>Получите деньги
+				</p>
+				<p class="card-text">
+					Получаете деньги наличными или на карту и продолжаете пользоваться авто
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="advantages">
+		<h2>Почему нам доверяют?</h2>
+		<div class="advantages-content">
+			<ol>
+				<li>Выдаём до 95% стоимости автомобиля</li>
+				<li>Рассматриваем даже старую спецтехнику</li>
+				<li>После получения займа автомобиль остаётся у вас</li>
+				<li>Для одобрения нужно всего 3 документа</li>
+				<li>Плохая кредитная история не имеет значения</li>
+				<li>Без лишних комиссий, справок и скрытых платежей</li>
+				<li>Без переоформления спецтехники</li>
+				<li>Нет штрафов за досрочное погашение</li>
+			</ol>
+			<img src="img/advantages-bg.png" alt="">
+		</div>
+	</section>
+
+	<section class="application">
+	  <h2>Заявка на займ под ПТС в Москве</h2>
+	  <p class="hint">Заполните форму и мы свяжемся с вами в течение 5 минут</p>
+	  <form action="" class="main-form">
+	  	<div class="field">
+	      <input type="text" class="main-form-name" required="" />
+	      <label>Ваше имя</label>
+	    </div>
+	    <div class="field">
+	       <input type="text" class="main-form-phone" required="" />
+	      <label>Телефон</label>
+	    </div>
+	    <div class="field">
+	      <input type="text" class="main-form-sum" required="" />
+	      <label>Сумма займа</label>
+	    </div>
+	    	<div class="btn-wrapper">
+		    	<div class="button">
+		    		<span>Отправить заявку</span>
+		    	</div>
+		    </div>
+	      <div class="hint">
+	        <span>Оставляя заявку, вы соглашаетесь с</span>
+	        <a href="#">политикой конфиденциальности</a>
+	      </div>
+  	  </form>
+	</section>
+
+	<section class="requirements">
+		<a name='requirements'></a>
+		<img src="img/requirements-bg.png" alt="" class="requirements-bg">
+	    <h2>Требования для получения денег под залог ПТС</h2>
+	    <div class="board">
+	      <div class="selection">
+	        <p class="option option-selected" data-id='1'>К заёмщику</p>
+	        <p class="option" data-id='2'>К авто</p>
+	        <p class="option" data-id='3'>К документам</p>
+	      </div>
+	       <ul class='req-wrapper req-wrapper-active' id='req-1'>
+	        <li>Гражданство РФ</li>
+	        <li>Возраст от 18 до 70 лет</li>
+	        <li>Трудоустройство не требуется</li>
+	        <li>Кредитная история не имеет значения</li>
+	        <li>Не требуется 2-НДФЛ</li>
+	      </ul>
+	      <ul class='req-wrapper' id='req-2'>
+	        <li>2 Гражданство РФ</li>
+	        <li>Возраст от 18 до 70 лет</li>
+	        <li>Трудоустройство не требуется</li>
+	        <li>Кредитная история не имеет значения</li>
+	        <li>Не требуется 2-НДФЛ</li>
+	      </ul>
+	      <ul class='req-wrapper' id='req-3'>
+	        <li>3 Гражданство РФ</li>
+	        <li>Возраст от 18 до 70 лет</li>
+	        <li>Трудоустройство не требуется</li>
+	        <li>Кредитная история не имеет значения</li>
+	        <li>Не требуется 2-НДФЛ</li>
+	      </ul>
+	      <img src="img/requirements-bg2.png" alt="" class="requirements-bg2">
+	    </div>
+	</section>
+
+	<section class="cars">
+		<h2>Автомобили всех типов</h2>
+		<p class="hint">Мы выдаём деньги под залог любых транспортных средств</p>
+		<div class="card-box">
+			<div class="card">
+				<p class="card-name">
+					<span>1.</span>Легковые автомобили
+				</p>
+				<p class="card-text">
+					Отечественные авто, иномарки
+				</p>
+				<img src="img/car-icon1.png" alt="">
+			</div>
+			<div class="card">
+				<p class="card-name">
+					<span>2.</span>Грузовые автомобили
+				</p>
+				<p class="card-text">
+					Газели, тягачи, фуры
+				</p>
+				<img src="img/car-icon2.png" alt="">
+			</div>
+			<div class="card">
+				<p class="card-name">
+					<span>3.</span>Спецтехника
+				</p>
+				<p class="card-text">
+					Отечественные авто, иномарки
+				</p>
+				<img src="img/car-icon3.png" alt="">
+			</div>
+			<div class="card">
+				<p class="card-name">
+					<span>4.</span>Мототехника
+				</p>
+				<p class="card-text">
+					Отечественные авто, иномарки
+				</p>
+				<img src="img/car-icon4.png" alt="">
+			</div>
+		</div>	
+	</section>
+
+	<section class="full-form">
+		<a name='request'></a>
+		<h2>Онлайн заявка на получение денег</h2>
+		<div class="board">
+			<ul class="selection">
+				<li class="form-option option-active" data-id='1'>
+					<p>Экспресс анкета</p>
+					<p class="hint">Решение через 1 минуту, предварительное одобрение</p>
+				</li>
+				<li class="form-option" data-id='2'>
+					<p>Подробная анкета</p>
+					<p class="hint">Решение за 15 минут, фактическое одобрение</p>
+				</li>
+			</ul>
+			<p class="hint">Решение через 1 минуту, предварительное одобрение</p>
+			<form action="" class='full-form form-wrapper form-wrapper-active' id='form-1'>
+				<div class="field">
+			      <input type="text" class="full-form-name" required="" />
+			      <label>Ваше имя</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-phone" required="" />
+			      <label>Телефон</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-sum" required="" />
+			      <label>Сумма займа</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-marka" required="" />
+			      <label>Марка автомобиля</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-car-model" required="" />
+			      <label>Модель автомобиля</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-year" required="" />
+			      <label>Год выпуска</label>
+			    </div>
+		      <p>Ваша ставка: 3% в месяц</p>
+		    	<div class="btn-wrapper">
+			    	<div class="button">
+			    		<span>Отправить заявку</span>
+			    	</div>
+			    </div>
+		      <div class="hint">
+		        <span>Оставляя заявку, вы соглашаетесь с</span>
+		        <a href="#">политикой конфиденциальности</a>
+		      </div>
+  	  		</form>
+  	  		<form action="" class='full-form form-wrapper' id='form-2'>
+		      <div class="field">
+			      <input type="text" class="full-form-name" required="" />
+			      <label>Ваше имя</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-name" required="" />
+			      <label>Ваша фамилия</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-phone" required="" />
+			      <label>Телефон</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-sum" required="" />
+			      <label>Сумма займа</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-marka" required="" />
+			      <label>Марка автомобиля</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-car-model" required="" />
+			      <label>Модель автомобиля</label>
+			    </div>
+			    <div class="field">
+			      <input type="text" class="full-form-year" required="" />
+			      <label>Год выпуска</label>
+			    </div>
+		      <p>Ваша ставка: 3% в месяц</p>
+		    	<div class="btn-wrapper">
+			    	<div class="button">
+			    		<span>Отправить заявку</span>
+			    	</div>
+			    </div>
+		      <div class="hint">
+		        <span>Оставляя заявку, вы соглашаетесь с</span>
+		        <a href="#">политикой конфиденциальности</a>
+		      </div>
+  	  		</form>
+		</div>
+	</section>
+
+	<section class="faq">
+	  <h2>Вопросы-ответы</h2>
+	  <p class="hint">Ответы на часто задаваемые вопросы</p>
+	  <div class="faq-board">
+	  	<div class="dropdown">
+	    <div class="header">
+	      <div class="title">Какие требования к заёмщику?</div>
+	      <img src="img/arrow-down.svg" alt="arrow-down" />
+	    </div>
+	    <div class="menu">
+	      Возможность оформления заявки и получения денежных средств
+	      предоставляется исключительно фактическому собственнику транспортного
+	      средства, чьи паспортные данные указаны в паспорте и свидетельстве о
+	      регистрации автомобиля.
+	      <br /> 
+	      <br />
+	      Если гражданин не является собственником авто, но имеет генеральную
+	      доверенность, оформить займ, к сожалению, нельзя.
+	    </div>
+	  </div>
+	  <div class="dropdown">
+	    <div class="header">
+	      <div class="title">Всегда ли при залоге авто остаётся у меня?</div>
+	      <img src="img/arrow-down.svg" alt="arrow-down"/>
+	    </div>
+	    <div class="menu">
+	      Возможность оформления заявки и получения денежных средств
+	      предоставляется исключительно фактическому собственнику транспортного
+	      средства, чьи паспортные данные указаны в паспорте и свидетельстве о
+	      регистрации автомобиля.
+	      <br />
+	      <br />
+	      Если гражданин не является собственником авто, но имеет генеральную
+	      доверенность, оформить займ, к сожалению, нельзя.
+	    </div>
+	  </div>
+	  <div class="dropdown">
+	    <div class="header">
+	      <div class="title">Какие документы нужны для получения займа?</div>
+	      <img src="img/arrow-down.svg" alt="arrow-down" />
+	    </div>
+	    <div class="menu">
+	      Возможность оформления заявки и получения денежных средств
+	      предоставляется исключительно фактическому собственнику транспортного
+	      средства, чьи паспортные данные указаны в паспорте и свидетельстве о
+	      регистрации автомобиля.
+	      <br />
+	      <br />
+	      Если гражданин не является собственником авто, но имеет генеральную
+	      доверенность, оформить займ, к сожалению, нельзя.
+	    </div>
+	  </div>
+	  <div class="dropdown">
+	    <div class="header">
+	      <div class="title">
+	        Одобрят ли мне займ, если имеется генеральная доверенность на авто?
+	      </div>
+	      <img src="img/arrow-down.svg" alt="arrow-down" />
+	    </div>
+	    <div class="menu">
+	      Возможность оформления заявки и получения денежных средств
+	      предоставляется исключительно фактическому собственнику транспортного
+	      средства, чьи паспортные данные указаны в паспорте и свидетельстве о
+	      регистрации автомобиля.
+	      <br />
+	      <br />
+	      Если гражданин не является собственником авто, но имеет генеральную
+	      доверенность, оформить займ, к сожалению, нельзя.
+	    </div>
+	  </div>
+	  <div class="dropdown">
+	    <div class="header">
+	      <div class="title">Где и как я смогу забрать деньги в Москве?</div>
+	      <img src="img/arrow-down.svg" alt="arrow-down" />
+	    </div>
+	     <div class="menu">
+	      Возможность оформления заявки и получения денежных средств
+	      предоставляется исключительно фактическому собственнику транспортного
+	      средства, чьи паспортные данные указаны в паспорте и свидетельстве о
+	      регистрации автомобиля.
+	      <br />
+	      <br />
+	      Если гражданин не является собственником авто, но имеет генеральную
+	      доверенность, оформить займ, к сожалению, нельзя.
+	    </div>
+	  </div>
+	  </div>
+	</section>
+
+	<section class="callback">
+		<h2>Остались вопросы?</h2>
+		<p class="hint">Наши менеджеры ответят на все ваши вопросы</p>
+		<p class="number">+7 (800) 555-28-45</p>
+		<p>Круглосуточно, без выходных</p>
+		<form action="" class="callback-form">
+			<input type="text" placeholder="Телефон">
+			<div class="btn-wrapper">
+		    	<div class="button">
+		    		<span>Заказать звонок</span>
+		    	</div>
+		    </div>
+		</form>
+	</section>
+
+	<!-- <section class="find-us">
+		<a name="contacts"></a>
+	  <h2>Где мы находимся</h2>
+	  <p>г. Москва, ул. Московская, д.62к2с1</p>
+	  <div class="map">
+	    <div>
+	     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.0260540729823!2d37.351691615993204!3d55.72329938054553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54faf6d4c20d5%3A0x6cf93caf3c16674c!2z0YPQuy4g0JzQvtGB0LrQvtCy0YHQutCw0Y8sIDYyLCDQndC10LzRh9C40L3QvtCy0LrQsCwg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAxNDMwMjU!5e0!3m2!1sru!2sus!4v1628618388976!5m2!1sru!2sus" width="100%" height="387" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	    </div>
+	  </div>
+	</section> -->
+
+	<footer>
+	  <nav>
+	    <a href="#">Займ под ПТС легкового авто</a>
+	    <a href="#">Займ под ПТС грузового авто</a>
+	    <a href="#">О компании</a>
+	    <a href="#">Для юридических лиц</a>
+	    <a href="/contacts.html">Контакты</a>
+	    <div class="socials">
+	    <a href="#">
+	        <img src="img/instagram-black.svg" alt="instagram" />
+	    </a>
+	    <a href="#">
+	        <img src="img/vkontakte-black.svg" alt="vkontakte" />
+	    </a>
+	    <a href="#">
+	        <img src="img/facebook-black.svg" alt="facebook" />
+	    </a>
+	    <a href="#">
+	        <img src="img/ok-black.svg" alt="ok" />
+	    </a>
+	  </div>
+	  </nav>
+	  <div class="info">
+	    <span class="phone-number">+7 (800) 555-28-45</span>
+	    <input id='footer-phone' type="tel" placeholder="Телефон" />
+	    <div class="btn-wrapper">
+			<div class="button">
+	    		<span>Заказать звонок</span>
+	       	</div>
+	    </div>
+	  </div>
+	  <div class="footnotes">
+	  	<a href="#">Политика конфиденциальности</a>
+	    <div>© «Название компании» 2021г.</div>
+	  </div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
